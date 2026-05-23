@@ -1,0 +1,48 @@
+body {
+    font-family: 'Times New Roman', serif; /* Tipografía clásica de periódico */
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fcfbf9; /* Color papel periódico */
+}
+
+header {
+    text-align: center;
+    border-bottom: 4px double #000; /* Línea doble clásica */
+    padding-bottom: 10px;
+}
+
+    header h1 {
+        font-size: 50px;
+        margin: 0;
+    }
+
+nav {
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #000;
+    margin-bottom: 20px;
+}
+
+    nav a {
+        text-decoration: none;
+        color: #000;
+        font-weight: bold;
+        margin: 0 10px;
+    }
+
+/* Distribución en columnas */
+.contenedor-prensa {
+    display: flex;
+    gap: 30px;
+}
+
+.noticia-principal {
+    flex: 2; /* Ocupa más espacio */
+    border-right: 1px solid #ccc;
+    padding-right: 20px;
+}
+
+.noticias-secundarias {
+    flex: 1; /* Columna lateral más angosta */
+}
