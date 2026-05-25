@@ -247,3 +247,25 @@ header h1 {
     font-style: italic;
     text-align: center;
 }
+
+/* --- FORMATO PARA LAS IMÁGENES DE LA NOTICIA DE MAPAS --- */
+
+/* Estilo para la foto del tablero completo */
+.foto-tablero {
+    width: 80%;           /* Ocupa una buena parte del ancho de la nota */
+    max-width: 600px;
+    height: auto;
+    display: block;
+    margin: 20px auto;    /* Separación vertical y centrado horizontal */
+    border: 3px double #000; /* Borde doble estilo periódico clásico */
+}
+
+/* Estilo para el mapa de Alaska de la profesora */
+.foto-ejemplo {
+    width: 50%;           /* Más pequeña para que actúe como un ejemplo insertado */
+    max-width: 400px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.15); /* Una sombra sutil para resaltar el mapa */
+}
