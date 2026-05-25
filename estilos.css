@@ -1,5 +1,6 @@
-/* --- TUS ESTILOS ANTERIORES SE MANTIENEN IGUAL --- */
-
+/* ==========================================================================
+   1. ESTILOS GENERALES Y BASE DE LA PÁGINA
+   ========================================================================== */
 body {
     font-family: 'Times New Roman', serif;
     max-width: 1000px;
@@ -19,12 +20,20 @@ header h1 {
     margin: 0;
 }
 
-.contenedor-prensa {
-    display: flex;
-    gap: 30px;
+/* Estilo global para imágenes de noticias */
+.imagen-noticia {
+    width: 40%;
+    max-width: 500px;
+    height: auto;
+    display: block;
+    margin: 15px auto;
+    border: 1px solid #ccc;
 }
 
-/* --- DISEÑO DEL MENÚ PRINCIPAL --- */
+
+/* ==========================================================================
+   2. MENÚ DE NAVEGACIÓN PRINCIPAL
+   ========================================================================== */
 .menu-principal {
     text-align: center;
     padding: 10px 0;
@@ -36,7 +45,7 @@ header h1 {
     text-decoration: none;
     color: #000;
     font-weight: bold;
-    margin: 0 15px; /* Espaciado entre los enlaces */
+    margin: 0 15px;
 }
 
 /* Añade una barra vertical automática entre los enlaces, excepto en el último */
@@ -47,175 +56,41 @@ header h1 {
     font-weight: normal;
 }
 
-.noticia-principal {
-    flex: 2;
-    border-right: 1px solid #ccc;
-    padding-right: 20px;
-}
 
-.noticias-secundarias {
-    flex: 1;
-}
-
-.boton-ver-mas {
-    display: inline-block;
-    background-color: #000;
-    color: #fff;
-    padding: 8px 15px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 14px;
-    margin-top: 15px;
-    border: 1px solid #000;
-}
-
-.boton-ver-mas:hover {
-    background-color: #fff;
-    color: #000;
-}
-
-/* --- NUEVOS ESTILOS PARA LA PÁGINA DE EXÁMENES --- */
-
-/* Contenedor del enlace de regresar */
-.navegacion-volver {
-    text-align: center;
-    margin-top: 15px;
-}
-
-.enlace-volver {
-    color: #000;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-/* Caja que centra la noticia individual a lo ancho */
-.seccion-noticia-individual {
-    max-width: 700px;
-    margin: 30px auto;
-}
-
-/* Estilos de los textos en la noticia individual */
-.articulo-completo {
-    line-height: 1.6;
-}
-
-.articulo-completo h2 {
-    font-size: 32px;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.articulo-completo .introduccion {
-    font-size: 18px;
-    text-align: justify;
-}
-
-/* Línea separadora clásica */
-.separador {
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 20px 0;
-}
-
-.articulo-completo h3 {
-    font-size: 20px;
-    margin-bottom: 20px;
-}
-
-.articulo-completo h4 {
-    font-size: 20px;
-    margin-bottom: 20px;
-}
-
-.articulo-completo h5 {
-    font-size: 20px;
-    margin-bottom: 20px;
-}
-
-.imagen-noticia {
-    width: 40%;           /* Ocupará solo el 60% del ancho de la columna */
-    max-width: 500px;     /* Límite máximo para que no se vea gigante en pantallas grandes */
-    height: auto;         /* Evita que la foto se deforme o se estire */
-    display: block;       /* Permite centrar la imagen */
-    margin: 15px auto;    /* Centra la imagen horizontalmente y da espacio arriba/abajo */
-    border: 1px solid #ccc;
-}
-
-/* --- ESTILOS DE LA NOTICIA DE EVENTOS --- */
-
-/* Título principal más llamativo */
-.titulo-noticia {
-    font-size: 34px;
-    text-align: center;
-    line-height: 1.3;
-    margin-bottom: 25px;
-}
-
-/* Subtítulo intermedio */
-.subtitulo-noticia {
-    font-size: 22px;
-    margin-top: 30px;
-    margin-bottom: 15px;
-    border-bottom: 1px dashed #000; /* Línea discontinua estilo prensa */
-    padding-bottom: 5px;
-}
-
-/* Párrafos justificados y con buen espacio para leer */
-.parrafo-prensa {
-    font-size: 17px;
-    text-align: justify;
-    line-height: 1.7;
-    margin-bottom: 15px;
-}
-
-/* Estilo para la lista de viñetas */
-.lista-detalles {
-    font-size: 16px;
-    line-height: 1.8;
-    padding-left: 20px;
-    margin-bottom: 25px;
-}
-
-.lista-detalles li {
-    margin-bottom: 10px; /* Espacio entre cada punto de la lista */
-}
-
-/* Texto de cierre en cursiva para dar énfasis */
-.cierre-noticia {
-    font-style: italic;
-    text-align: center;
-    color: #333;
-}
-
-/* --- CONFIGURACIÓN DE COLUMNAS DE LA PORTADA --- */
+/* ==========================================================================
+   3. ESTRUCTURA DE COLUMNAS DE LA PORTADA
+   ========================================================================== */
 .contenedor-prensa {
     display: flex;
-    gap: 40px;          /* Aumentamos la separación entre columnas */
+    gap: 40px;
     align-items: flex-start;
 }
 
+/* Formato vertical tipo párrafo clásico para la nota principal */
 .noticia-principal {
-    flex: 3;            /* Le damos mucho más espacio a la noticia principal (3 partes) */
+    flex: 3;
     border-right: 1px solid #ccc;
     padding-right: 30px;
-    
-    /* ESTO OBLIGA A QUE TODO VAYA HACIA ABAJO UNO TRAS OTRO */
     display: block !important; 
 }
 
+/* Columna lateral para avisos */
 .noticias-secundarias {
-    flex: 1.2;          /* Ampliamos esta columna para que el botón no se apriete */
-    min-width: 220px;   /* Evita que se encoja de más en pantallas pequeñas */
+    flex: 1.2;
+    min-width: 220px;
 }
 
-/* --- ESTILOS DE ELEMENTOS DE TEXTO --- */
+
+/* ==========================================================================
+   4. CONTENIDO ESPECÍFICO DE LA PORTADA (BIENVENIDA Y INTEGRANTES)
+   ========================================================================== */
 .titulo-bienvenida {
     font-size: 28px;
     line-height: 1.3;
     margin-bottom: 20px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    display: block;     /* Ocupa todo su renglón */
+    display: block;
 }
 
 .presentacion-texto {
@@ -223,16 +98,16 @@ header h1 {
     text-align: justify;
     line-height: 1.7;
     margin-bottom: 15px;
-    display: block;     /* Ocupa todo su renglón */
+    display: block;
 }
 
-/* --- CAJA DE AUTORES COMPLETAMENTE CORREGIDA --- */
+/* Caja de créditos e integrantes */
 .bloque-autores {
     margin-top: 40px;
     padding: 20px;
     border: 1px solid #000;
     background-color: #f7f5f0;
-    display: block;     /* Va al fondo de la nota ocupando todo el ancho */
+    display: block;
     clear: both;
 }
 
@@ -245,25 +120,116 @@ header h1 {
 }
 
 .lista-autores {
-    list-style-type: square; 
+    list-style-type: square;
     padding-left: 20px;
     margin: 0 0 15px 0;
     font-size: 15px;
-    display: block;     /* Asegura que los nombres se listen verticalmente */
+    display: block;
 }
 
 .lista-autores li {
     margin-bottom: 10px;
-    display: list-item; /* Devuelve el formato de lista estándar */
+    display: list-item;
 }
 
-/* --- BOTÓN DE RECUERDO AMPLIADO --- */
+
+/* ==========================================================================
+   5. CONTENIDO ESPECÍFICO DE PÁGINAS INTERNAS (EXÁMENES Y EVENTOS)
+   ========================================================================== */
+.seccion-noticia-individual {
+    max-width: 700px;
+    margin: 30px auto;
+}
+
+.articulo-completo {
+    line-height: 1.6;
+}
+
+.articulo-completo h2 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.articulo-completo h3,
+.articulo-completo h4,
+.articulo-completo h5 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.articulo-completo .introduccion {
+    font-size: 18px;
+    text-align: justify;
+}
+
+.separador {
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+/* Elementos de la nota de eventos */
+.titulo-noticia {
+    font-size: 34px;
+    text-align: center;
+    line-height: 1.3;
+    margin-bottom: 25px;
+}
+
+.subtitulo-noticia {
+    font-size: 22px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-bottom: 1px dashed #000;
+    padding-bottom: 5px;
+}
+
+.parrafo-prensa {
+    font-size: 17px;
+    text-align: justify;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.lista-detalles {
+    font-size: 16px;
+    line-height: 1.8;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+.lista-detalles li {
+    margin-bottom: 10px;
+}
+
+.cierre-noticia {
+    font-style: italic;
+    text-align: center;
+    color: #333;
+}
+
+
+/* ==========================================================================
+   6. COMPONENTES DE NAVEGACIÓN SECUNDARIA Y BOTONES
+   ========================================================================== */
+.navegacion-volver {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.enlace-volver {
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+}
+
 .boton-ver-mas {
-    display: block;       /* Ahora ocupa todo el ancho de su columna lateral */
-    text-align: center;   /* Centra el texto dentro del botón */
+    display: block;
+    text-align: center;
     background-color: #000;
     color: #fff;
-    padding: 12px 15px;   /* Más espacio interno para que no se sienta apretado */
+    padding: 12px 15px;
     text-decoration: none;
     font-weight: bold;
     font-size: 14px;
@@ -271,7 +237,12 @@ header h1 {
     border: 1px solid #000;
 }
 
-.gC{
+.boton-ver-mas:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.gC {
     font-size: 15px;
     font-style: italic;
     text-align: center;
