@@ -1,0 +1,272 @@
+/* --- TUS ESTILOS ANTERIORES SE MANTIENEN IGUAL --- */
+
+body {
+    font-family: 'Times New Roman', serif;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fcfbf9;
+}
+
+header {
+    text-align: center;
+    border-bottom: 4px double #000;
+    padding-bottom: 10px;
+}
+
+header h1 {
+    font-size: 50px;
+    margin: 0;
+}
+
+.contenedor-prensa {
+    display: flex;
+    gap: 30px;
+}
+
+/* --- DISEÑO DEL MENÚ PRINCIPAL --- */
+.menu-principal {
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #000;
+    margin-bottom: 20px;
+}
+
+.menu-principal a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    margin: 0 15px; /* Espaciado entre los enlaces */
+}
+
+/* Añade una barra vertical automática entre los enlaces, excepto en el último */
+.menu-principal a:not(:last-child)::after {
+    content: " |";
+    margin-left: 15px;
+    color: #000;
+    font-weight: normal;
+}
+
+.noticia-principal {
+    flex: 2;
+    border-right: 1px solid #ccc;
+    padding-right: 20px;
+}
+
+.noticias-secundarias {
+    flex: 1;
+}
+
+.boton-ver-mas {
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    padding: 8px 15px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 15px;
+    border: 1px solid #000;
+}
+
+.boton-ver-mas:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* --- NUEVOS ESTILOS PARA LA PÁGINA DE EXÁMENES --- */
+
+/* Contenedor del enlace de regresar */
+.navegacion-volver {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.enlace-volver {
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Caja que centra la noticia individual a lo ancho */
+.seccion-noticia-individual {
+    max-width: 700px;
+    margin: 30px auto;
+}
+
+/* Estilos de los textos en la noticia individual */
+.articulo-completo {
+    line-height: 1.6;
+}
+
+.articulo-completo h2 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.articulo-completo .introduccion {
+    font-size: 18px;
+    text-align: justify;
+}
+
+/* Línea separadora clásica */
+.separador {
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+.articulo-completo h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.articulo-completo h4 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.articulo-completo h5 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.imagen-noticia {
+    width: 40%;           /* Ocupará solo el 60% del ancho de la columna */
+    max-width: 500px;     /* Límite máximo para que no se vea gigante en pantallas grandes */
+    height: auto;         /* Evita que la foto se deforme o se estire */
+    display: block;       /* Permite centrar la imagen */
+    margin: 15px auto;    /* Centra la imagen horizontalmente y da espacio arriba/abajo */
+    border: 1px solid #ccc;
+}
+
+/* --- ESTILOS DE LA NOTICIA DE EVENTOS --- */
+
+/* Título principal más llamativo */
+.titulo-noticia {
+    font-size: 34px;
+    text-align: center;
+    line-height: 1.3;
+    margin-bottom: 25px;
+}
+
+/* Subtítulo intermedio */
+.subtitulo-noticia {
+    font-size: 22px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-bottom: 1px dashed #000; /* Línea discontinua estilo prensa */
+    padding-bottom: 5px;
+}
+
+/* Párrafos justificados y con buen espacio para leer */
+.parrafo-prensa {
+    font-size: 17px;
+    text-align: justify;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+/* Estilo para la lista de viñetas */
+.lista-detalles {
+    font-size: 16px;
+    line-height: 1.8;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+.lista-detalles li {
+    margin-bottom: 10px; /* Espacio entre cada punto de la lista */
+}
+
+/* Texto de cierre en cursiva para dar énfasis */
+.cierre-noticia {
+    font-style: italic;
+    text-align: center;
+    color: #333;
+}
+
+/* --- CONFIGURACIÓN DE COLUMNAS DE LA PORTADA --- */
+.contenedor-prensa {
+    display: flex;
+    gap: 40px;          /* Aumentamos la separación entre columnas */
+    align-items: flex-start;
+}
+
+.noticia-principal {
+    flex: 3;            /* Le damos mucho más espacio a la noticia principal (3 partes) */
+    border-right: 1px solid #ccc;
+    padding-right: 30px;
+    
+    /* ESTO OBLIGA A QUE TODO VAYA HACIA ABAJO UNO TRAS OTRO */
+    display: block !important; 
+}
+
+.noticias-secundarias {
+    flex: 1.2;          /* Ampliamos esta columna para que el botón no se apriete */
+    min-width: 220px;   /* Evita que se encoja de más en pantallas pequeñas */
+}
+
+/* --- ESTILOS DE ELEMENTOS DE TEXTO --- */
+.titulo-bienvenida {
+    font-size: 28px;
+    line-height: 1.3;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: block;     /* Ocupa todo su renglón */
+}
+
+.presentacion-texto {
+    font-size: 17px;
+    text-align: justify;
+    line-height: 1.7;
+    margin-bottom: 15px;
+    display: block;     /* Ocupa todo su renglón */
+}
+
+/* --- CAJA DE AUTORES COMPLETAMENTE CORREGIDA --- */
+.bloque-autores {
+    margin-top: 40px;
+    padding: 20px;
+    border: 1px solid #000;
+    background-color: #f7f5f0;
+    display: block;     /* Va al fondo de la nota ocupando todo el ancho */
+    clear: both;
+}
+
+.titulo-autores {
+    font-size: 16px;
+    margin: 0 0 15px 0;
+    text-transform: uppercase;
+    border-bottom: 1px solid #000;
+    padding-bottom: 5px;
+}
+
+.lista-autores {
+    list-style-type: square; 
+    padding-left: 20px;
+    margin: 0 0 15px 0;
+    font-size: 15px;
+    display: block;     /* Asegura que los nombres se listen verticalmente */
+}
+
+.lista-autores li {
+    margin-bottom: 10px;
+    display: list-item; /* Devuelve el formato de lista estándar */
+}
+
+/* --- BOTÓN DE RECUERDO AMPLIADO --- */
+.boton-ver-mas {
+    display: block;       /* Ahora ocupa todo el ancho de su columna lateral */
+    text-align: center;   /* Centra el texto dentro del botón */
+    background-color: #000;
+    color: #fff;
+    padding: 12px 15px;   /* Más espacio interno para que no se sienta apretado */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 15px;
+    border: 1px solid #000;
+}
